@@ -1,0 +1,26 @@
+#BASIC CALCULATOR
+
+#VAIRABLES
+
+num1 = (float(input("Enter a number, this will be the first one.")))
+num2 = (float(input("Enter a number, this will be the second one.")))
+factor = input("Enter what operation you want.")
+try:
+  if factor == "/" or " /" or " / ":
+    print(num1/num2)
+  elif factor == "+" or " +" or " + ":
+    print(num1+num2)
+  elif factor == "*" or " *" or " * ":
+    print(num1*num2)
+  elif factor == "-" or " -" or " - ":
+    print(num1-num2)
+  else:
+    print("this is broken thanks.")
+except:
+  print("this is broken thanks.")
+print("Thanks for using my calculator. I\'m trying to make it better.")
+
+
+
+
+
