@@ -1,0 +1,16 @@
+import random
+
+print("HEY, WANNA PLAY? ALL IT TAKES IS A LITTLE PART OF\n YOUR DAY!\nENTER A NUMBER 1-100 IF YOU GUESS RIGHT,\n YOU\'RE THE BEST!\nREADY TO PUT IT TO THE TEST?")
+guess=input("\nWhat's your guess?! - ")
+value=(str(random.randint(1,100)))
+while guess!=value:
+  print("\nTHE WINNING NUMBER WAS: " + value)
+  print("\nYOU GUESSED: " + guess)  
+  guess=input("\nWhat's your guess? - ")
+  value=(str(random.randint(1,100)))
+  if guess == value:
+    print("WOW, YOU WON!")
+    break
+  elif guess=='right':
+    print("\nYOU FOUND THE EASTER EGG!!!!")
+    break
