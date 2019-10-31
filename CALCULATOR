@@ -1,3 +1,128 @@
+10-31-19
+#BASIC CALCULATOR
+import math
+import random
+
+#FUNCTIONS
+
+def add(first, second):
+  return (first+second)
+
+def subtract(first, second):
+  return first-second
+
+def multiply(first, second):
+  return (first*second)
+
+def divide(first, second):
+  return first/second
+
+def square(first, second):
+  print("\nThis is the square of the first number you put:")
+  return (first*first)
+  print("\nThis is the square of the second number you put:")
+  return (secont*second)
+  print("")
+
+def sqrt(first, second, firsto, value,):
+	while first*first != firsto:
+	  value = (float(random.randint(0, firsto)))
+    if first*first == firsto:
+		  return first
+		  break
+
+#FUNCTIONS
+Pi = math.pi
+
+
+#CALCULATOR
+
+print("\nThis is a calculator, select one of the operations:\n\n1.Add\n2.Subtract\n3.Multiply\n4.Divide\n5.Square\n7.Square Root(This will have to be the first number you put.)(both numbers - default)\n\nP.S: If you want to use π, you can use just type \"-3.14\"") 
+
+
+num1 = (float(input("\nEnter a number, this will be the first one.")))
+num2 = (float(input("\nEnter a number, this will be the second one.")))
+factor = (str(input("\nEnter what operation you want)))
+while factor == "1" or "2" or "3" or "4" or "5" or "7" or "8":
+  if num1 == -3.14 :
+    num1 = Pi
+    break
+  elif num2 == -3.14:
+    num2 == Pi
+    break
+  elif factor == "1":
+    print("ADDITION:\n")
+    print(add(num1, num2))
+    break
+  elif factor == "2":
+    print("SUBTRACTION:\n")
+    print(subtract(num1, num2))
+    break
+  elif factor == "3":
+    print("MULTIPLICATION:\n")
+    print(multiply(num1, num2))
+    break
+  elif factor == "4":
+    print("DIVISION:\n")
+    print(divide(num1, num2))
+    break
+  elif factor == "5":
+    print("SQUARE:\n")
+    print(square(num1, num2))
+    break
+  else:
+    print("\nINVALID INPUT")
+    
+  print("\nThanks for using my calculator. I\'m trying to make it better.")
+  print("Press any key to exit:")
+  print("")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ OLD 
+ 
 #BASIC CALCULATOR
 
 #VAIRABLES
