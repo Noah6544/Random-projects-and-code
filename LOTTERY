@@ -1,16 +1,46 @@
 import random
 
 print("HEY, WANNA PLAY? ALL IT TAKES IS A LITTLE PART OF\n YOUR DAY!\nENTER A NUMBER 1-100 IF YOU GUESS RIGHT,\n YOU\'RE THE BEST!\nREADY TO PUT IT TO THE TEST?")
-guess=input("\nWhat's your guess?! - ")
-value=(str(random.randint(1,100)))
-while guess!=value:
-  print("\nTHE WINNING NUMBER WAS: " + value)
-  print("\nYOU GUESSED: " + guess)  
-  guess=input("\nWhat's your guess? - ")
+main = (str(input("\nWould you rather try to guess 1 number, or spam other? Press 1 for one number and 2 for spam:")))
+if main == "1":
   value=(str(random.randint(1,100)))
-  if guess == value:
-    print("WOW, YOU WON!")
-    break
-  elif guess=='right':
+  print("\nOne number? Cool, I think that's more fun anyways.")
+  count = 0
+  guess=input("\nWhat's your guess?! - ")
+  while guess != value:
+    guess=input("\nWhat's your guess?! - ")
+    if guess > value:
+      print("Too high...")
+      break
+    elif guess < value:
+      print("Too low...")
+      break
+    elif guess == value:
+      print("The winning number was: " + value)
+      print("WOW, YOU GOT IT!!")
+    count += 1
+else:
+  guess=input("\nWhat's your guess?! - ")
+  value=(str(random.randint(1,100)))
+  if guess=='right':
     print("\nYOU FOUND THE EASTER EGG!!!!")
-    break
+  elif guess>value:
+    print("Your guess is too high, try again.")
+  else:
+    while guess!=value:
+      print("\nTHE WINNING NUMBER WAS: " + value)
+      print("\nYOU GUESSED: " + guess)  
+      guess=input("\nWhat's your guess? - ")
+      value=(str(random.randint(1,100)))
+      if guess == value:
+        print("WOW, YOU WON!")
+        break
+      elif guess=='right':
+        print("\nYOU FOUND THE EASTER EGG!!!!")
+        print("")
+        break
+      elif guess > value and guess != value:
+      print("Your guess is too high, try again.")
+    else:
+      print("Your broke it bum.")
+     
