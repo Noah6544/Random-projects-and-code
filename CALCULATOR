@@ -4,9 +4,11 @@ import random
 
 #FUNCTIONS
 
+
 def add(first, second):
     print("\nfirst + second = ")
     return (first+second)
+
 
 def subtract(first, second):
     print("first-second = ")
@@ -15,8 +17,10 @@ def subtract(first, second):
     print(second-first)
     print("")
 
+
 def multiply(first, second):
     return (first*second)
+
 
 def divide(first, second):
     print("\nfirst/second = ")
@@ -33,12 +37,17 @@ def square(first, second):
     print(second*second)
     print("")
 
-def sqrtexact(num1, first):
+
+
+def sqrtexact(num1, first, count):
     while first*first != num1:
         value = (float(random.randint(0, num1)))
         first += .0000000000001
+        count += 1
+        print(count)
         if first*first == num1:
             print(first)
+            print("eureaka idk")
             break
 
 def sqrt(num1, first):
@@ -53,9 +62,9 @@ def sqrt(num1, first):
             print("\nYou're number doesn't seem to have a square root that is a whole number. You can try to find the\nexact "
                   "square root of this number but I wouldn't recommend trying this, if it's a number greater than"
                   "100, for it may take awhile until it gets solved. However, if you would like to try again, despite the time, press 2. otherwise press 1.")
-            sqrtcont = input("\nIf you would like to get the exact sqare root of your nubmer press 1. if you would like to quit, press 2: ")
+            sqrtcont = input("\nIf you would like to get the exact sqare root of your nubmer press 2. if you would like to quit, press 1: ")
             if sqrtcont == "2":
-                print(sqrtexact(num1, count))
+                print(sqrtexact(num1, guess, count))
             else:
                 print("Still doesn't look like it's going to work, sorry.")
 
@@ -69,15 +78,19 @@ Pi = math.pi
 print("\nThis is a calculator, select one of the operations:\n\n1.Add\n2.Subtract\n3.Multiply\n4.Divide\n5.Square\n7."
       "Square Root(This will have to be the first number you put.)(both numbers - default)\n\nP.S: If you want to use π,"
       " you can use just type \"-3.14\"")
+
+
+
 count = 0
+guess = 0
 factor = (str(input("\nEnter what operation you want: ")))
 if factor == "7":
     num1 = (float(input("\nEnter a number, this will be the number that the square root will be found of (grammer check please.)")))
 if factor == "7":
     pass
 else:
-    num2 = (float(input("\nEnter a number, this will be the second one: ")))
-    num1 = float(input("\nEnter a number, this will be the second one: "))
+    num1 = (float(input("\nEnter a number, this will be the FIRST one: ")))
+    num2 = float(input("\nEnter a number, this will be the SECOND one: "))
     if num1 == -3.14:
         num1 = Pi
     elif num2 == -3.14:
@@ -99,9 +112,12 @@ elif factor == "5":
     print("SQUARE:\n")
     print(square(num1, num2))
 elif factor == "7":
-    print(sqrt(num1, count))
+    print(sqrt(num1, guess))
 elif factor > 7:
-    print("\nThere is no built in operation that is that high.")
+    print("\nThere is no built in operation that is that high. Come Back Later.")
+
+
+
 
 print("\nThanks for using my calculator. I\'m trying to make it better.")
 print("Press any key to exit:")
