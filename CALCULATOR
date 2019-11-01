@@ -1,9 +1,12 @@
+
 #BASIC CALCULATOR
+#IMPORTS
+
 import math
 import random
+import sys
 
 #FUNCTIONS
-
 
 def add(first, second):
     print("\nfirst + second = ")
@@ -39,16 +42,25 @@ def square(first, second):
 
 
 
+
 def sqrtexact(num1, first, count):
     while first*first != num1:
         value = (float(random.randint(0, num1)))
         first += .0000000000001
         count += 1
         print(count)
+        print("number:\n")
+        print(first)
+        print(num1)
         if first*first == num1:
             print(first)
             print("eureaka idk")
             break
+        elif first*first > num1:
+          print("INVALID INPUT")
+        elif first*first == (num1 - 0.01) or first*first == (num - .001) or first*firsst:
+          print("boi")
+          
 
 def sqrt(num1, first):
     while first*first != num1:
@@ -59,43 +71,63 @@ def sqrt(num1, first):
             print(first)
             break
         elif first*first != num1 and first*first > num1:
-            print("\nYou're number doesn't seem to have a square root that is a whole number. You can try to find the\nexact "
-                  "square root of this number but I wouldn't recommend trying this, if it's a number greater than"
-                  "100, for it may take awhile until it gets solved. However, if you would like to try again, despite the time, press 2. otherwise press 1.")
+            print("\nYou're number doesn't seem to be a perfect square, to find the\nexact "
+                  "square root of this number\n(WARNING: THIS MAY TAKE AWHILE)\nIf you would like to try again, despite the time, press 2. otherwise press 1.")
             sqrtcont = input("\nIf you would like to get the exact sqare root of your nubmer press 2. if you would like to quit, press 1: ")
             if sqrtcont == "2":
                 print(sqrtexact(num1, guess, count))
             else:
-                print("Still doesn't look like it's going to work, sorry.")
+                print("\nYou may continue to use the calculator. HIT RUN. ")
 
 
-#FUNCTIONS
+'''
+def triangle(a, b):
+  a*a = a2
+  b*b = b2
+  a2 + b2 = c2
+  print(c2)
+'''
+
+
+#VAIRIABLES
 Pi = math.pi
 
 
 #CALCULATOR
 
 print("\nThis is a calculator, select one of the operations:\n\n1.Add\n2.Subtract\n3.Multiply\n4.Divide\n5.Square\n7."
-      "Square Root(This will have to be the first number you put.)(both numbers - default)\n\nP.S: If you want to use π,"
+      "Square Root(This will square both number)\n\n8.ADVANCED CALCULATIONS (calculations including parenthesis)\n9.Pythagoras' Theorem\n\nP.S: If you want to use π,"
       " you can use just type \"-3.14\"")
 
 
 
 count = 0
 guess = 0
+
+#ADVANCDED INPUTS
+
+
 factor = (str(input("\nEnter what operation you want: ")))
 if factor == "7":
     num1 = (float(input("\nEnter a number, this will be the number that the square root will be found of (grammer check please.)")))
-if factor == "7":
+elif factor != "9" or "8" or "7" or "6" or "5" or "4" or "3" or "2" or "1":
+  factor = (float(factor))
+  if factor > 9:
+    print("\nINVALID INPUT\nThere is no built in operator that is that high.")
+    sys.exit()
+  if factor < 1:
+    print("\nINVALID INPUT\nThere is no built in operator that is that low.")
+    sys.exit()
+  else:
     pass
 else:
-    num1 = (float(input("\nEnter a number, this will be the FIRST one: ")))
-    num2 = float(input("\nEnter a number, this will be the SECOND one: "))
-    if num1 == -3.14:
-        num1 = Pi
-    elif num2 == -3.14:
-        num2 == Pi
-
+  pass  
+  num1 = (float(input("\nEnter a number, this will be the FIRST one: ")))
+  num2 = float(input("\nEnter a number, this will be the SECOND one: "))
+  if num1 == -3.14:
+    num1 = Pi
+  elif num2 == -3.14:
+    num2 == Pi
 if factor == "1":
     print("ADDITION:\n")
     print(add(num1, num2))
@@ -113,8 +145,11 @@ elif factor == "5":
     print(square(num1, num2))
 elif factor == "7":
     print(sqrt(num1, guess))
-elif factor > 7:
-    print("\nThere is no built in operation that is that high. Come Back Later.")
+elif factor == "8":
+  print("So you ")
+elif facor == "9":
+  print(triangle(num1, num2))
+
 
 
 
@@ -122,76 +157,3 @@ elif factor > 7:
 print("\nThanks for using my calculator. I\'m trying to make it better.")
 print("Press any key to exit:")
 print("")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- OLD 
- 
-#BASIC CALCULATOR
-
-#VAIRABLES
-
-num1 = (float(input("Enter a number, this will be the first one.")))
-num2 = (float(input("Enter a number, this will be the second one.")))
-factor = input("Enter what operation you want.")
-try:
-  if factor == "/" or " /" or " / ":
-    print(num1/num2)
-  elif factor == "+" or " +" or " + ":
-    print(num1+num2)
-  elif factor == "*" or " *" or " * ":
-    print(num1*num2)
-  elif factor == "-" or " -" or " - ":
-    print(num1-num2)
-  else:
-    print("this is broken thanks.")
-except:
-  print("this is broken thanks.")
-print("Thanks for using my calculator. I\'m trying to make it better.")
-
-
-
-
-
