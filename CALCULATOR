@@ -1,3 +1,41 @@
+#BASIC CALCULATOR
+
+#VAIRABLES
+
+num1 = (float("Enter a number, this will be the first one."))
+num2 = (float("Enter a number, this will be the second one."))
+factor = ("Enter what operation you want.")
+if factor = "/" or " /" or " / ":
+	print(num1/num2)
+elif factor = "+" or " +" or " + ":
+	print(num1+num2)
+elif factor = "*" or " *" or " * ":
+	print(num1*num2)
+elif factor = "-" or " -" or " - ":
+	print(num1-num2)
+
+print("Thanks for using my calculator. I\'m trying to make it better.")
+
+
+
+
+
+
+
+
+
+
+10-31-19
+
+
+
+
+
+
+
+
+
+
 
 #BASIC CALCULATOR
 #IMPORTS
@@ -82,9 +120,9 @@ def sqrt(num1, first):
 
 '''
 def triangle(a, b):
-  a*a = a2
-  b*b = b2
-  a2 + b2 = c2
+  a2 = a*a
+  b2 = b*b
+  c2 = b2 + a2
   print(c2)
 '''
 
@@ -95,8 +133,8 @@ Pi = math.pi
 
 #CALCULATOR
 
-print("\nThis is a calculator, select one of the operations:\n\n1.Add\n2.Subtract\n3.Multiply\n4.Divide\n5.Square\n7."
-      "Square Root(This will square both number)\n\n8.ADVANCED CALCULATIONS (calculations including parenthesis)\n9.Pythagoras' Theorem\n\nP.S: If you want to use π,"
+print("\nThis is a calculator, select one of the operations:\n\n1.Add\n2.Subtract\n3.Multiply\n4.Divide\n5.Square\n6."
+      "Square Root(This will square both number)\n\n7.ADVANCED CALCULATIONS (calculations including parenthesis)\n8.Pythagoras\' Theorem\n\nP.S: If you want to use π,"
       " you can use just type \"-3.14\"")
 
 
@@ -108,8 +146,9 @@ guess = 0
 
 
 factor = (str(input("\nEnter what operation you want: ")))
-if factor == "7":
-    num1 = (float(input("\nEnter a number, this will be the number that the square root will be found of (grammer check please.)")))
+if factor == "6":
+	num1 = (float(input("\nEnter a number, this will be the number that the square root will be found of (grammer check please.)")))
+	print(sqrt(num1, guess))
 elif factor != "9" or "8" or "7" or "6" or "5" or "4" or "3" or "2" or "1":
   factor = (float(factor))
   if factor > 9:
@@ -120,8 +159,7 @@ elif factor != "9" or "8" or "7" or "6" or "5" or "4" or "3" or "2" or "1":
     sys.exit()
   else:
     pass
-else:
-  pass  
+else:  
   num1 = (float(input("\nEnter a number, this will be the FIRST one: ")))
   num2 = float(input("\nEnter a number, this will be the SECOND one: "))
   if num1 == -3.14:
@@ -144,11 +182,10 @@ elif factor == "5":
     print("SQUARE:\n")
     print(square(num1, num2))
 elif factor == "7":
-    print(sqrt(num1, guess))
-elif factor == "8":
-  print("So you ")
-elif facor == "9":
+  print("So you want an advanced operation,  ")
+elif facor == "8":
   print(triangle(num1, num2))
+	print
 
 
 
@@ -157,3 +194,7 @@ elif facor == "9":
 print("\nThanks for using my calculator. I\'m trying to make it better.")
 print("Press any key to exit:")
 print("")
+ 
+
+
+
