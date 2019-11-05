@@ -37,6 +37,7 @@ print("Thanks for using my calculator. I\'m trying to make it better.")
 
 
 
+
 #BASIC CALCULATOR
 #IMPORTS
 
@@ -106,8 +107,8 @@ def sqrt(num1, first):
         first += 1
         first*first
         if first*first == num1:
+            print("\nThe square root of - " + (str(num1)) + " - is:\n")
             print(first)
-            break
         elif first*first != num1 and first*first > num1:
             print("\nYou're number doesn't seem to be a perfect square, to find the\nexact "
                   "square root of this number\n(WARNING: THIS MAY TAKE AWHILE)\nIf you would like to try again, despite the time, press 2. otherwise press 1.")
@@ -118,13 +119,13 @@ def sqrt(num1, first):
                 print("\nYou may continue to use the calculator. HIT RUN. ")
 
 
-'''
+
 def triangle(a, b):
   a2 = a*a
   b2 = b*b
-  c2 = b2 + a2
-  print(c2)
-'''
+  c2 = a2+b2
+  print(str(a) + "^2 + " + (str(b)) + "^2 = \n\na^2 + b^2 = c^2\n\nc^2 = \n")
+  return c2
 
 
 #VAIRIABLES
@@ -133,40 +134,29 @@ Pi = math.pi
 
 #CALCULATOR
 
-print("\nThis is a calculator, select one of the operations:\n\n1.Add\n2.Subtract\n3.Multiply\n4.Divide\n5.Square\n6."
-      "Square Root(This will square both number)\n\n7.ADVANCED CALCULATIONS (calculations including parenthesis)\n8.Pythagoras\' Theorem\n\nP.S: If you want to use π,"
-      " you can use just type \"-3.14\"")
+print("\nThis is a calculator select one of the operations:\n\n1.Add\n2.Subtract\n3.Multiply\n4.Divide\n5.Square\n7.Square Root(This will square both number)\n\n8.ADVANCED CALCULATIONS (calculations including parenthesis)\n9.Pythagoras\' Theorem\n\nP.S: If you want to use π, you can use just type \"-3.14\"")
 
 
-
-count = 0
-guess = 0
+count=0
+guess=0
 
 #ADVANCDED INPUTS
 
 
 factor = (str(input("\nEnter what operation you want: ")))
-if factor == "6":
-	num1 = (float(input("\nEnter a number, this will be the number that the square root will be found of (grammer check please.)")))
-	print(sqrt(num1, guess))
-elif factor != "9" or "8" or "7" or "6" or "5" or "4" or "3" or "2" or "1":
-  factor = (float(factor))
-  if factor > 9:
-    print("\nINVALID INPUT\nThere is no built in operator that is that high.")
-    sys.exit()
-  if factor < 1:
-    print("\nINVALID INPUT\nThere is no built in operator that is that low.")
-    sys.exit()
-  else:
-    pass
-else:  
+if factor == "7":
+    num1 = (float(input("\nEnter a number, this will be the number that the square root will be found of (grammer check please.)")))
+    print(sqrt(num1, guess))
+else:
+  pass
+if factor != "7":
   num1 = (float(input("\nEnter a number, this will be the FIRST one: ")))
   num2 = float(input("\nEnter a number, this will be the SECOND one: "))
-  if num1 == -3.14:
-    num1 = Pi
-  elif num2 == -3.14:
-    num2 == Pi
-if factor == "1":
+if num1 == -3.14:
+  num1 = Pi
+elif num2 == -3.14:
+  num2 == Pi
+elif factor == "1":
     print("ADDITION:\n")
     print(add(num1, num2))
 elif factor == "2":
@@ -180,21 +170,25 @@ elif factor == "4":
     print(divide(num1, num2))
 elif factor == "5":
     print("SQUARE:\n")
-    print(square(num1, num2))
-elif factor == "7":
-  print("So you want an advanced operation,  ")
-elif facor == "8":
+    print(square(num1, num2))    
+elif factor == "8":
+  print("So you ")
+elif factor == "9":
   print(triangle(num1, num2))
-	print
 
-
+elif factor != "9" or "8" or "7" or "6" or "5" or "4" or "3" or "2" or "1":
+  factor = (float(factor))
+  if factor > 9:
+    print("\nINVALID INPUT\nThere is no built in operator that is that high.")
+    sys.exit()
+  if factor < 1:
+    print("\nINVALID INPUT\nThere is no built in operator that is that low.")
+    sys.exit()
+  else:
+    pass
 
 
 
 print("\nThanks for using my calculator. I\'m trying to make it better.")
 print("Press any key to exit:")
 print("")
- 
-
-
-
