@@ -39,6 +39,7 @@ print("Thanks for using my calculator. I\'m trying to make it better.")
 
 
 
+
 #BASIC CALCULATOR
 #IMPORTS
 
@@ -110,11 +111,24 @@ def sqrt(num1, first):
         elif first*first != num1 and first*first > num1:
             print("\nYou're number doesn't seem to be a perfect square, to find the\nexact "
                   "square root of this number\n(WARNING: THIS MAY TAKE AWHILE)\nIf you would like to try again, despite the time, press 2. otherwise press 1.")
-            sqrtcont = input("\nIf you would like to get the exact sqare root of your nubmer press 2. if you would like to quit, press 1: ")
+            sqrtcont = input("\nIf you would like to get the exact sqare root of your nubmer press 2. if you would like to quit, press 1:\nIf none of the other two are working, please, press 3. ")
             if sqrtcont == "2":
               print(sqrtexact(num1, guess, count))
+              break           
+            elif sqrtcont == "3":
+              print(square(num1))
+              break
+              sys.exit()
             else:
               print("\nYou may continue to use the calculator. HIT RUN. ")
+              break
+              sys.exit()
+
+
+def square(num1):
+  print("\nThe squrare root of, " + (str(num1)) + " is - \n")
+  print(math.sqrt(num1))
+
 
 
 
@@ -131,7 +145,7 @@ Pi = math.pi
 
 #CALCULATOR
 
-print("\nThis is a calculator select one of the operations:\n\n1.Add\n2.Subtract\n3.Multiply\n4.Divide\n5.Square\n7.Square Root(This will square both number)\n\n8.ADVANCED CALCULATIONS (calculations including parenthesis)\n9.Pythagoras\' Theorem\n\nP.S: If you want to use π, you can use just type \"-3.14\"")
+print("\nThis is a calculator select one of the operations:\n\n1.Add\n2.Subtract\n3.Multiply\n4.Divide\n5.Square\n7.Square Root(This will square both numbers)\n\n8.ADVANCED CALCULATIONS (calculations including parenthesis - BROKEN)\n9.Pythagoras\' Theorem\n\nP.S: If you want to use π, you can use just type \"-3.14\"")
 
 
 count=0
@@ -144,16 +158,30 @@ factor = (str(input("\nEnter what operation you want: ")))
 if factor == "7":
     num1 = (float(input("\nEnter a number, this will be the number that the square root will be found of (grammer check please.)")))
     print(sqrt(num1, guess))
+    sys.exit()
 else:
   pass
-if factor != "7":
-  num1 = (float(input("\nEnter a number, this will be the FIRST one: ")))
-  num2 = float(input("\nEnter a number, this will be the SECOND one: "))
+if factor != "9" or "8" or "7" or "6" or "5" or "4" or "3" or "2" or "1":
+  factor = (float(factor))
+  if factor > 10:
+    print("\nINVALID INPUT\nThere is no built in operator that is that high.")
+    sys.exit()
+  elif factor < 1:
+    print("\nINVALID INPUT\nThere is no built in operator that is that low.")
+    sys.exit()
+  elif factor in range(1, 11):
+    print("\nThis is a valid operation!")
+  else:
+    pass
+num1 = (float(input("\nEnter a number, this will be the FIRST one: ")))
+num2 = float(input("\nEnter a number, this will be the SECOND one: "))
 if num1 == -3.14:
   num1 = Pi
-elif num2 == -3.14:
-  num2 == Pi
-elif factor == "1":
+if num2 == -3.14:
+    num2 == Pi
+else:
+  pass
+if factor == "1":
     print("ADDITION:\n")
     print(add(num1, num2))
 elif factor == "2":
@@ -174,16 +202,6 @@ elif factor == "9":
   print(triangle(num1, num2))
 elif factor == "10":
   print(prime(num1, num2, guess))
-elif factor != "9" or "8" or "7" or "6" or "5" or "4" or "3" or "2" or "1":
-  factor = (float(factor))
-  if factor > 10:
-    print("\nINVALID INPUT\nThere is no built in operator that is that high.")
-    sys.exit()
-  if factor < 1:
-    print("\nINVALID INPUT\nThere is no built in operator that is that low.")
-    sys.exit()
-  else:
-    pass
 
 
 
