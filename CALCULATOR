@@ -40,7 +40,7 @@ print("Thanks for using my calculator. I\'m trying to make it better.")
 
 
 
-#
+
 #BASIC CALCULATOR
 #IMPORTS
 
@@ -146,7 +146,7 @@ Pi = math.pi
 
 #CALCULATOR
 
-print("\nThis is a calculator select one of the operations:\n\n1.Add\n2.Subtract\n3.Multiply\n4.Divide\n5.Square\n7.Square Root(This will square both numbers)\n\n8.ADVANCED CALCULATIONS (calculations including parenthesis - BROKEN)\n9.Pythagoras\' Theorem\n\nP.S: If you want to use π, you can use just type \"-3.14\"")
+print("\nThis is a calculator select one of the operations:\n\n1.Add\n2.Subtract\n3.Multiply\n4.Divide\n5.Square\n7.Square Root(This will square both numbers)\n\n8.ADVANCED CALCULATIONS (calculations including parenthesis - BROKEN)\n9.Pythagoras\' Theorem\n\nP.S: If you want to use π, you can use just type \"`\"")
 
 
 count=0
@@ -169,27 +169,21 @@ if factor > 10:
 elif factor < 1:
   print("\nINVALID INPUT\nThere is no built in operator that is that low.")
   sys.exit()
-'''
-  elif factor in range(1, 11):
-   print("\nThis is a valid operation!")
-  else:
-    pass
-else:
-  pass
-'''
-num1 = (float(input("\nEnter a number, this will be the FIRST one: ")))
-num2 = float(input("\nEnter a number, this will be the SECOND one: "))
-if num1 == -3.14:
+num1 = (str(input("\nEnter a number, this will be the FIRST one: ")))
+num2 = (str(input("\nEnter a number, this will be the SECOND one: "))
+if num1 == "`":
+  num1 = (float(num1))
   num1 = Pi
 else:
   pass
-if num2 == -3.14:
-  num2 == Pi
+if num2 == "`":
+  num2 = (float(num2))
+  num2 = Pi
 else:
   pass
 if factor in range(1, 11):
- print("\nThis is a valid operation!")
- pass
+  print("\nThis is a valid operation!")
+  pass
 else:
   pass
 if factor == 1:
@@ -219,3 +213,4 @@ elif factor == 10:
 print("\nThanks for using my calculator. I\'m trying to make it better.")
 print("Press any key to exit:")
 print("")
+
