@@ -40,6 +40,7 @@ print("Thanks for using my calculator. I\'m trying to make it better.")
 
 
 
+#
 #BASIC CALCULATOR
 #IMPORTS
 
@@ -154,53 +155,63 @@ guess=0
 #ADVANCDED INPUTS
 
 
-factor = (str(input("\nEnter what operation you want: ")))
-if factor == "7":
-    num1 = (float(input("\nEnter a number, this will be the number that the square root will be found of (grammer check please.)")))
-    print(sqrt(num1, guess))
-    sys.exit()
+factor = (float(input("\nEnter what operation you want: ")))
+
+if factor == 7:
+  num1 = (float(input("\nEnter a number, this will be the number that the square root will be found of (grammer check please.)")))
+  print(sqrt(num1, guess))
+  sys.exit()
 else:
   pass
-if factor != "9" or "8" or "7" or "6" or "5" or "4" or "3" or "2" or "1":
-  factor = (float(factor))
-  if factor > 10:
-    print("\nINVALID INPUT\nThere is no built in operator that is that high.")
-    sys.exit()
-  elif factor < 1:
-    print("\nINVALID INPUT\nThere is no built in operator that is that low.")
-    sys.exit()
+if factor > 10:
+  print("\nINVALID INPUT\nThere is no built in operator that is that high.")
+  sys.exit()
+elif factor < 1:
+  print("\nINVALID INPUT\nThere is no built in operator that is that low.")
+  sys.exit()
+'''
   elif factor in range(1, 11):
-    print("\nThis is a valid operation!")
+   print("\nThis is a valid operation!")
   else:
     pass
+else:
+  pass
+'''
 num1 = (float(input("\nEnter a number, this will be the FIRST one: ")))
 num2 = float(input("\nEnter a number, this will be the SECOND one: "))
 if num1 == -3.14:
   num1 = Pi
-if num2 == -3.14:
-    num2 == Pi
 else:
   pass
-if factor == "1":
+if num2 == -3.14:
+  num2 == Pi
+else:
+  pass
+if factor in range(1, 11):
+ print("\nThis is a valid operation!")
+ pass
+else:
+  pass
+if factor == 1:
     print("ADDITION:\n")
     print(add(num1, num2))
-elif factor == "2":
+elif factor == 2:
     print("SUBTRACTION:\n")
     print(subtract(num1, num2))
-elif factor == "3":
+elif factor == 3:
     print("MULTIPLICATION:\n")
     print(multiply(num1, num2))
-elif factor == "4":
+elif factor == 4:
     print("DIVISION:\n")
     print(divide(num1, num2))
-elif factor == "5":
+elif factor == 5:
     print("SQUARE:\n")
     print(square(num1, num2))    
-elif factor == "8":
-  print("So you ")
-elif factor == "9":
+elif factor == 8:
+  print("BROKEN - FOR NOW")
+elif factor == 9:
   print(triangle(num1, num2))
-elif factor == "10":
+elif factor == 10:
   print(prime(num1, num2, guess))
 
 
