@@ -28,6 +28,7 @@ print("Thanks for using my calculator. I\'m trying to make it better.")
 10-31-19
 11-6-19
 11-7-19 9:00am
+11-7-19 4:04 pm
 
 
 
@@ -49,27 +50,30 @@ print("Thanks for using my calculator. I\'m trying to make it better.")
 import math
 import random
 import sys
+#inf = (float(inf))
 
 #FUNCTIONS
 
-def add(first, second, third, fourth, fifth):
-  number = (float(input("\nHow many numbers do you want to add? You can add up to 5")))
-  while number in range(int((0,6))):
-	  if number == 2:	
-   	  #rint("\nfirst + second")
-    	#return(first+second)
-	  #elif number == 3:
-		  #print("\nfirst + second + third = ")
-      #return(first+second+third)
-		elif number == 4:
-		  print("\nfirst + second + third + fourth = ")
-    	return(first+second+third+fourth)
-		elif number == 5:
-			print("\nfirst + second + fourth + fourth + fifth = ")
-    	return(first+second+third+fourth+fifth)
-    else:
-      print("\nINVALID INPUT")
-      break
+"""
+def add(first, second, third, fourth, fifth, number):
+	number = (float(input("\nHow many numbers do you want to add? You can add up to 5")))
+	if number = 2:	
+		print("\nfirst + second")
+    		return(first+second)
+	elif number = 3:
+		print("\nfirst + second + third = ")
+    return(first+second+third)
+	elif number = 4:
+		print("\nfirst + second + third + fourth = ")
+    return(first+second+third+fourth)
+	elif number = 5:
+		print("\nfirst + second + fourth + fourth + fifth = ")
+    return(first+second+third+fourth+fifth)
+	else:
+	print("\nINVALID INPUT")
+	break
+"""
+
 
 
 def subtract(first, second):
@@ -94,28 +98,41 @@ def divide(num1, num2):
 
 
 def square(first, second):
-   print("\nThis is the square of the first number you put:\n")
-   print(first*first)
-   print("\nThis is the square of the second number you put:")
-   print(second*second)
-   print("")
+  print("\nThis is the square of the first number you put:\n")
+  print(first*first)
+  print("\nThis is the square of the second number you put:")
+  answer = second*second
+  return answer
+  print("")
+  if first == inf:
+	   return first
+  else:
+    pass
+  if second == second:
+    return first
+  else:
+    pass
+  if answer == inf:
+    return answer
+  else:
+    pass
 
 
 
 
 def sqrtexact(num1, first, count):
-    while first*first != num1:
-        value = (float(random.randint(0, num1)))
-        first += .0000000000001
-        count += 1
-        if first*first == num1:
-            print(first)
-            print("eureaka idk")
-            break
-        elif first*first > num1:
-          print("INVALID INPUT")
-        elif first*first == (num1 - 0.01) or first*first == (num1 - .001) or first*first:
-          print("boi")
+  while first*first != num1:
+    value = (float(random.randint(0, num1)))
+    first += .0000000000001
+    count += 1
+    if first*first == num1:
+      print(first)
+      print("eureaka idk")
+      break
+    elif first*first > num1:
+      print("INVALID INPUT")
+    elif first*first == (num1 - 0.01) or first*first == (num1 - .001) or first*first:
+      print("boi")
           
 
 def sqrt(num1, first):
@@ -124,26 +141,26 @@ def sqrt(num1, first):
         first += 1
         first*first
         if first*first == num1:
-            print("\nThe square root of - " + (str(num1)) + " - is:\n")
-            print(first)
+          print("\nThe square root of - " + (str(num1)) + " - is:\n")
+          print(first)
         elif first*first != num1 and first*first > num1:
-            print("\nYou're number doesn't seem to be a perfect square, to find the\nexact "
-                  "square root of this number\n(WARNING: THIS MAY TAKE AWHILE)\nIf you would like to try again, despite the time, press 2. otherwise press 1.")
-            sqrtcont = input("\nIf you would like to get the exact sqare root of your nubmer press 2. if you would like to quit, press 1:\nIf none of the other two are working, please, press 3. ")
-            if sqrtcont == "2":
-              print(sqrtexact(num1, guess, count))
-              break           
-            elif sqrtcont == "3":
-              print(square(num1))
-              break
-              sys.exit()
-            else:
-              print("\nYou may continue to use the calculator. HIT RUN. ")
-              break
-              sys.exit()
+          print("\nYou're number doesn't seem to be a perfect square, to find the\nexact "
+          "square root of this number\n(WARNING: THIS MAY TAKE AWHILE)\nIf you would like to try again, despite the time, press 2. otherwise press 1.")
+          sqrtcont = input("\nIf you would like to get the exact sqare root of your nubmer press 2. if you would like to quit, press 1:\nIf none of the other two are working, please, press 3. ")
+          if sqrtcont == "2":
+            print(sqrtexact(num1, guess, count))
+            break           
+          elif sqrtcont == "3":
+            print(square(num1))
+            break
+            sys.exit()
+          else:
+            print("\nYou may continue to use the calculator. HIT RUN. ")
+            break
+            sys.exit()
 
 
-def square(num1):
+def squarert(num1):
   print("\nThe squrare root of, " + (str(num1)) + " is - \n")
   print(math.sqrt(num1))
 
@@ -157,6 +174,9 @@ def triangle(a, b):
   print(str(a) + "^2 + " + (str(b)) + "^2 = \n\na^2 + b^2 = c^2\n\nc^2 = \n")
   return c2
 
+
+def prime(num1, num2)
+  while num1 !
 
 
 
