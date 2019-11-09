@@ -29,6 +29,7 @@ print("Thanks for using my calculator. I\'m trying to make it better.")
 11-6-19
 11-7-19 9:00am
 11-7-19 4:04 pm
+11-9-19 5:51PM
 
 
 
@@ -59,7 +60,7 @@ def add(first, second, third, fourth, fifth, number):
 	number = (float(input("\nHow many numbers do you want to add? You can add up to 5")))
 	if number = 2:	
 		print("\nfirst + second")
-    		return(first+second)
+    return(first+second)
 	elif number = 3:
 		print("\nfirst + second + third = ")
     return(first+second+third)
@@ -73,7 +74,6 @@ def add(first, second, third, fourth, fifth, number):
 	print("\nINVALID INPUT")
 	break
 """
-
 
 
 def subtract(first, second):
@@ -174,9 +174,10 @@ def triangle(a, b):
   print(str(a) + "^2 + " + (str(b)) + "^2 = \n\na^2 + b^2 = c^2\n\nc^2 = \n")
   return c2
 
-
+"""
 def prime(num1, num2)
   while num1 !
+"""
 
 
 
@@ -186,7 +187,7 @@ Pi = math.pi
 
 #CALCULATOR
 
-print("\nThis is a calculator select one of the operations:\n\n1.Add\n2.Subtract\n3.Multiply\n4.Divide\n5.Square\n7.Square Root(This will square both numbers)\n\n8.ADVANCED CALCULATIONS (calculations including parenthesis - BROKEN)\n9.Pythagoras\' Theorem\n\nP.S: If you want to use π, you can use just type \"-3.14\"")
+print("\nThis is a calculator select one of the operations:\n\n1.Add(BROKEN AS OF NOW)\n2.Subtract\n3.Multiply\n4.Divide\n5.Square(This will square both numbers)\n\n7.Square Root(BROKEN - PRESS 3 WHEN PROMPTED)\n8.ADVANCED CALCULATIONS (calculations including parenthesis - BROKEN)\n9.Pythagoras\' Theorem\n\nP.S: If you want to use π, you can use just type \"-3.14\"")
 
 
 count=0
@@ -255,3 +256,4 @@ elif factor == 10:
 print("\nThanks for using my calculator. I\'m trying to make it better.")
 print("Press any key to exit:")
 print("")
+
