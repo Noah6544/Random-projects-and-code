@@ -1,259 +1,55 @@
-#BASIC CALCULATOR
-
-#VAIRABLES
-
-num1 = (float("Enter a number, this will be the first one."))
-num2 = (float("Enter a number, this will be the second one."))
-factor = ("Enter what operation you want.")
-if factor = "/" or " /" or " / ":
-	print(num1/num2)
-elif factor = "+" or " +" or " + ":
-	print(num1+num2)
-elif factor = "*" or " *" or " * ":
-	print(num1*num2)
-elif factor = "-" or " -" or " - ":
-	print(num1-num2)
-
-print("Thanks for using my calculator. I\'m trying to make it better.")
-
-
-
-
-
-
-
-
-
-
-10-31-19
-11-6-19
-11-7-19 9:00am
-11-7-19 4:04 pm
-11-9-19 5:51PM
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#BASIC CALCULATOR
 #IMPORTS
-
-import math
-import random
 import sys
-#inf = (float(inf))
-
+import random
+#VARIABLES
+count = 0
 #FUNCTIONS
+def leave(what):
+	sys.exit(what)
 
-"""
-def add(first, second, third, fourth, fifth, number):
-	number = (float(input("\nHow many numbers do you want to add? You can add up to 5")))
-	if number = 2:	
-		print("\nfirst + second")
-    return(first+second)
-	elif number = 3:
-		print("\nfirst + second + third = ")
-    return(first+second+third)
-	elif number = 4:
-		print("\nfirst + second + third + fourth = ")
-    return(first+second+third+fourth)
-	elif number = 5:
-		print("\nfirst + second + fourth + fourth + fifth = ")
-    return(first+second+third+fourth+fifth)
+print("I will try to crack your code of 4 digits(make sure it's bigger than 1111).")
+digits = (int(input("\nHow many digits do you want?")))
+if digits > 5:
+	print("\nThis program doesn't accept that many digits as of now.")
+	print(leave("\n---\nTOO MANY DIGITS\n---"))
+elif digits < 4:
+	print("\nThis program doesn't less than 4 digits as of now.")
+	print(leave("\n---\nTOO LITTLE DIGITS\n---"))
+else:
+	pass
+code = (int(input("\nWhat is the code you want me to crack, I won't look.")))
+if code > 9999999:
+	print("\nYou put more digits than you said you would. Try again")
+	sys.exit("\n--\nToo many digits\n---")
+elif code < 1111111:
+	print("\nYou put less digits than you said you would. Try again")
+	sys.exit("\n---\nNot enough digits\n---")
+else:
+	pass
+bet = (int(input("\nHow many guesses are you going to give me? If I win, you'll pay.")))
+print("\nI'm going to try to guess your code right now. Here goes nothing.")
+guess = (int(random.randint(1111111, 9999999)))
+if guess == code:
+	print("Wow, I guessed it in one try. here's the number I guessed -")
+	print(guess)
+	print("Here's the number you put -")
+	print(code)
+else:
+	pass
+while guess!=code:
+	count += 1
+	if count == 10 or 20 or 30 or 40 or 50 or 60 or 70 or 80 or 90 or 100:
+		print("I'm on my " + (str(count)) + " attempt")
 	else:
-	print("\nINVALID INPUT")
-	break
-"""
-
-
-def subtract(first, second):
-    print("first-second = ")
-    print(first-second)
-    print("\nsecond-first = ")
-    print(second-first)
-    print("")
-
-
-def multiply(first, second):
-  print((str(first)) + "*" + (str(second)) + "=")
-  return (first*second)
-
-
-def divide(num1, num2):
-  print((str(num1)) +"/" + (str(num2)) +  " = ")
-  print (num1/num2)
-  print((str(num2)) +"/" + (str(num1)) +  " = ")
-  print(num2/num1)
-  print("")
-
-
-def square(first, second):
-  print("\nThis is the square of the first number you put:\n")
-  print(first*first)
-  print("\nThis is the square of the second number you put:")
-  answer = second*second
-  return answer
-  print("")
-  if first == inf:
-	   return first
-  else:
-    pass
-  if second == second:
-    return first
-  else:
-    pass
-  if answer == inf:
-    return answer
-  else:
-    pass
-
-
-
-
-def sqrtexact(num1, first, count):
-  while first*first != num1:
-    value = (float(random.randint(0, num1)))
-    first += .0000000000001
-    count += 1
-    if first*first == num1:
-      print(first)
-      print("eureaka idk")
-      break
-    elif first*first > num1:
-      print("INVALID INPUT")
-    elif first*first == (num1 - 0.01) or first*first == (num1 - .001) or first*first:
-      print("boi")
-          
-
-def sqrt(num1, first):
-    while first*first != num1:
-        value = (float(random.randint(0, num1)))
-        first += 1
-        first*first
-        if first*first == num1:
-          print("\nThe square root of - " + (str(num1)) + " - is:\n")
-          print(first)
-        elif first*first != num1 and first*first > num1:
-          print("\nYou're number doesn't seem to be a perfect square, to find the\nexact "
-          "square root of this number\n(WARNING: THIS MAY TAKE AWHILE)\nIf you would like to try again, despite the time, press 2. otherwise press 1.")
-          sqrtcont = input("\nIf you would like to get the exact sqare root of your nubmer press 2. if you would like to quit, press 1:\nIf none of the other two are working, please, press 3. ")
-          if sqrtcont == "2":
-            print(sqrtexact(num1, guess, count))
-            break           
-          elif sqrtcont == "3":
-            print(square(num1))
-            break
-            sys.exit()
-          else:
-            print("\nYou may continue to use the calculator. HIT RUN. ")
-            break
-            sys.exit()
-
-
-def squarert(num1):
-  print("\nThe squrare root of, " + (str(num1)) + " is - \n")
-  print(math.sqrt(num1))
-
-
-
-
-def triangle(a, b):
-  a2 = a*a
-  b2 = b*b
-  c2 = a2+b2
-  print(str(a) + "^2 + " + (str(b)) + "^2 = \n\na^2 + b^2 = c^2\n\nc^2 = \n")
-  return c2
-
-"""
-def prime(num1, num2)
-  while num1 !
-"""
-
-
-
-#VAIRIABLES
-Pi = math.pi
-
-
-#CALCULATOR
-
-print("\nThis is a calculator select one of the operations:\n\n1.Add(BROKEN AS OF NOW)\n2.Subtract\n3.Multiply\n4.Divide\n5.Square(This will square both numbers)\n\n7.Square Root(BROKEN - PRESS 3 WHEN PROMPTED)\n8.ADVANCED CALCULATIONS (calculations including parenthesis - BROKEN)\n9.Pythagoras\' Theorem\n\nP.S: If you want to use π, you can use just type \"-3.14\"")
-
-
-count=0
-guess=0
-
-#ADVANCDED INPUTS
-
-
-factor = (float(input("\nEnter what operation you want: ")))
-
-if factor == 7:
-  num1 = (float(input("\nEnter a number, this will be the number that the square root will be found of (grammer check please.)")))
-  print(sqrt(num1, guess))
-  sys.exit()
-else:
-  pass
-if factor > 10:
-  print("\nINVALID INPUT\nThere is no built in operator that is that high.")
-  sys.exit()
-elif factor < 1:
-  print("\nINVALID INPUT\nThere is no built in operator that is that low.")
-  sys.exit()
-else:
-  pass
-if factor in range(0, 11):
-  print("\nThis is a valid operation!")
-else:
-  pass
-num1 = (float(input("\nEnter a number, this will be the FIRST one: ")))
-if num1 == -3.14:
-  num1 = Pi
-  print("\nYour number now = Pi")
-else:
-  pass
-num2 = (float(input("\nEnter a number, this will be the SECOND one: ")))
-if num2 == -3.14:
-  num2 = Pi
-  print("\nYour number now = Pi")
-else:
-  pass
-
-if factor == 1:
-  print("ADDITION:\n")
-  print(add(num1, num2))
-elif factor == 2:
-  print("SUBTRACTION:\n")
-  print(subtract(num1, num2))
-elif factor == 3:
-    print("MULTIPLICATION:\n")
-    print(multiply(num1, num2))
-elif factor == 4:
-    print("DIVISION:\n")
-    print(divide(num1, num2))
-elif factor == 5:
-    print("SQUARE:\n")
-    print(square(num1, num2))    
-elif factor == 8:
-  print("BROKEN - FOR NOW")
-elif factor == 9:
-  print(triangle(num1, num2))
-elif factor == 10:
-  print(prime(num1, num2, guess))
-
-
-
-print("\nThanks for using my calculator. I\'m trying to make it better.")
-print("Press any key to exit:")
-print("")
-
+		pass
+	if count == bet:
+		print("\nOK, you won, I didn't guess it int time. BYE")
+		break
+	else:
+		pass
+	guess = (int(random.randint(1111111, 9999999)))
+	if guess == code:
+		print("Wow, I got it! I did it! I guessed your number! Just to check, your number is " + (str(code)) + "\nAnd my number is " + (str(code)) + "I did it, didn't I?!")
+		break
+	else:
+		pass
