@@ -1,0 +1,96 @@
+12-19-19 11:43PM
+
+
+
+
+
+
+###IMPORTS
+import time
+import random
+from termcolor import colored,cprint
+
+
+###VARIABLES
+twenty = "~~~~~~~~~~~~~~~~~~~~"
+twenty2 =  (twenty + "\n" + twenty + "\n")
+yes = ["yes", "YES", "Yes", "yEs", "yeS","YEs", "YeS", "YEs", "YeS", "YeS", "yES", "Y", "y"]
+no = ["no", "No", "NO", "nO", "N", "n"]
+twenty_long = (twenty + "~~~~~~~~~~")
+
+
+
+###FUNCTIONS
+def stat_choosing():
+  global attack
+  global defense
+  global speed
+  print(colored("PICKING RANDOM (ATTACK) STAT NOW...", 'blue'))
+  time.sleep(1.5)
+  for i in range(5):
+    print("Picking...", i)
+    time.sleep(.5)
+    attack = random.randint(0,100)
+  print(twenty)
+  print(colored("YOUR ATTACK STAT IS: " + str(attack), 'blue'))
+  time.sleep(2)
+  print(colored("PICKING RANDOM (DEFENSE) STAT NOW...", 'blue'))
+  time.sleep(1.5)
+  for i in range(5):
+    print("Picking...", i)
+    time.sleep(.5)
+    defense = random.randint(0, 100)
+  print(twenty)
+  print(colored("YOUR DEFENSE STAT IS: " + str(attack), 'blue'))
+  time.sleep(2)
+  print(colored("PICKING RANDOM (SPEED) STAT NOW...", 'blue'))
+  time.sleep(1.5)
+  for i in range(5):
+    print("Picking...", i)
+    time.sleep(.5)
+    speed = random.randint(0, 100)
+  print(twenty)
+  print(colored("YOUR SPEED STAT IS: " + str(attack), 'blue'))
+  print(twenty2)
+  print(colored("THIS MEANS YOUR STATS ARE: \n1.ATTACK: " + str(attack) + "\n2.DEFENSE: " + str(defense) + "\n3:SPEED: " + str(speed), 'blue'))
+
+
+
+def class_choosing():
+  bool = True
+  while bool == True:
+    do_you = int(input(colored("DO YOU WANT TO PICK YOU STATS[1],OR RECIEVE A RANDOM CLASS[2]?", 'red')))
+    if do_you == 1:      
+      print(twenty2)
+      print(colored("YOU WILL BE PICKING YOUR STATS", 'blue'))
+      time.sleep(1.5)
+      bool = False
+    elif do_you == 2:      
+      print(twenty)
+      print(colored("YOU WILL BE RECIVING A RANDOM CLASS", 'blue'))
+      print(stat_choosing())
+      bool = False
+    else:
+      print(twenty)
+      print(colored("INVALID INPUT, TRY AGAIN.", 'green'))
+      print(twenty2)
+
+###MAIN GAME 
+print(twenty + "~~~~~~~~~~")
+intro_have_you = str(input(colored("Have you seen the intro before?", 'red')))
+
+if intro_have_you in yes:
+  print(class_choosing())
+elif intro_have_you not in yes:
+  print(twenty)
+  print(colored("THIS IS AN RPG GAME - THE GOAL IS TO GET AS FAR AS POSSIBLE.", 'blue'))
+  time.sleep(1.5)
+  print(twenty)
+  print(class_choosing())
+
+print("jello")
+
+
+###crits
+###definese StopAsyncIteration
+###
