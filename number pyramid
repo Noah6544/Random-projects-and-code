@@ -1,0 +1,24 @@
+"""
+while numtype = float:
+	num = int(input("ENTER A WHOLE NUMBER TYLER. STOP BEING LIKE THAT"))
+"""
+while True:
+	try:
+		num = int(input('ENTER A WHOLE NUMBER'))
+	#if type == 
+		#while type == float:
+		#	num = int(input('ENTER A WHOLE NUMBER COME ON'))
+
+		count = 1
+		list = []
+		while num != 0:
+			if count <= num:
+				list.append(num)
+				count = count + 1
+			elif count > num:
+				print(list)
+				num = num - 1
+				count = 1
+				list = []
+	except ValueError:
+		print("ENTER A VALID NUMBER.")
