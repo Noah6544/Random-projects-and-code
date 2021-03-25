@@ -1,0 +1,48 @@
+from termcolor import colored,cprint
+twenty = (colored("~~~~~~~~~~~~~~~~~~~~", 'yellow'))
+import math
+
+def triangle(a, b):
+	a2 = a*a
+	b2 = b*b
+	c2 = a2+b2
+	text = (colored("{a}^2 + {b}^2 = {c2}\n\na^2 + b^2 = c^2","blue")).format(a=a,b=b,c2=c2)
+	print(text)
+	print(twenty)
+	print(twenty)
+	print(twenty)
+	print(colored("C^ =","red"))
+	print(colored(c2,"blue"))
+	print(colored(c2,"blue"))
+	print(twenty)
+	print(twenty)
+	print(colored("SQUARE ROOT OF C =\n","red"))
+	sqrtc = math.sqrt(c2)
+	return(sqrtc)
+
+print(colored("THANKS FOR SAYING THAT IT'S COOL","green"))
+print(twenty)
+print(twenty)
+print(twenty)
+print(twenty)
+user = input(colored("enter something","yellow"))
+print(twenty)
+print(twenty)
+print(twenty)
+print("\n\n\n")
+while True:
+	try:
+		
+		print(colored(user,"blue"))
+		a2 = int(input(colored("ENTER A: ","red")))
+		print(twenty)
+		b2 = int(input(colored("ENTER B: ","red")))
+		print(twenty)
+		print(twenty)
+		print(triangle(a2,b2))
+	except ValueError:
+		print(twenty)
+		print(twenty)
+		print(colored("PLEASE TRY AGAIN WITH AN INTERGER(NO DECIMALS OR LETTERS)","green"))
+		print(twenty)
+		print(twenty)
