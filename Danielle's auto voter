@@ -1,0 +1,30 @@
+import pyautogui as py
+import time
+import webbrowser
+
+name_button = (827, 583)
+vote_button = (813, 769)
+
+def reload_page():
+    with py.hold("ctrl"):
+        py.press("1")
+        py.press("w")
+    webbrowser.open("https://scorebooklive.com/georgia/2022/01/11/vote-now-who-is-the-top-point-guard-in-georgia-high-school-girls-basketball/")
+    time.sleep(2.5)
+
+reload_page()
+count = 0
+
+while True:
+   # active_position = tuple(py.position())
+    #if tuple(active_position) = vote_button:
+    py.click(name_button)
+    py.click(vote_button)
+    reload_page()
+    count += 1
+    #elif active_position != name_button:
+       # time.sleep(60)
+    if count % 20 == 0:
+        print(count)
+    else:
+        pass
